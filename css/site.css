@@ -2,7 +2,7 @@
 
 :root{
     --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --secondary-color: #fab907f8;
     --dark-color: #292929;
     --white-color: #dff3e4;
 }
@@ -70,4 +70,8 @@ main>.container {
     bottom: 0;
     width: 100%;
 
+}
+
+.black{
+    color: black;
 }

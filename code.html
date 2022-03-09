@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>evenNum: A Coding Project by Mark Villafuerte</title>
+    <title>REWIND: A Coding Project by Mark Villafuerte</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -40,7 +40,7 @@
             width="30"
             height="24"
           />
-          evenNum</a
+          REWIND</a
         >
 
         <button
@@ -81,22 +81,52 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
-          <h2 class="border-1 border-bottom border-dark">The Code for evenNum:</h2>
+          <h2 class="border-1 border-bottom border-dark">The Code for REWIND:</h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers"><code class="language-javascript">
-                    // Call Hello World
-function helloWorld(){
-    alert("Hello World!");
-}
+              // Get the string from the page
+              //controller function
+              function getValue() {
+                document.getElementById("alert").classList.add("invisible");
+              
+                let userString = document.getElementById("userString").value;
+                let revString = reverseString(userString);
+                displayString(revString);
+              }
+              
+              //Reverse the string
+              //logic function
+              function reverseString(userString) {
+                let revString = [];
+              
+                //reverse a string using a for loop
+              
+                for (let index = userString.length - 1; index >= 0; index--) {
+                  revString += userString[index];
+                }
+              
+                return revString;
+              }
+              
+              //Display the reversed string to the user
+              //View Function
+              function displayString(revstring) {
+                // write to the page
+                document.getElementById(
+                  "msg"
+                ).innerHTML = `Your word is reversed: ${revstring}`;
+              
+                //show the alert box
+                document.getElementById("alert").classList.remove("invisible");
+              }
+              
                 </code>
             </pre>
           </div>
           <div class="col-lg-4">
-                <p>The Code is structed in one function</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that display an alert with a message of "Hello World".</p>
-
+                <p>The Code is structed in three functions</p>
+            
           </div>
 
         </div>
